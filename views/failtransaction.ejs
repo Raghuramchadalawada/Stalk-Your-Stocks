@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <div class="jumbotron centered">
+        <i class="fas fa-exclamation-triangle fa-10x"></i>
+        <h1 class="display-3">Transaction Failed! </h1>
+        <p class="secret-text">Your Account Balance:
+        <h1><%=balanceleft%></h1>
+        </p>
+        <p class="secret-text">Total number of Stocks you posses:
+        <h1><%=stockspurchased%></h1>
+        </p>
+
+        <form action="/continuetrading" method="GET">
+            <button type="submit" class="btn btn-dark">Continue Trading</button>
+        </form>
+
+
+    </div>
+</div>
+<%- include('partials/footer') %>

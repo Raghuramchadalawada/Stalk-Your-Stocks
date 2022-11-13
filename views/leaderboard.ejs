@@ -1,0 +1,54 @@
+<%- include('partials/header') %>
+<div class="nav-header">
+    <h1 class="logo"><a href="/stocks">Stalk Your Stocks</a></h1>
+    <ul class="main-nav">
+        <li id="home"><a href="/stocks">HOME</a></li>
+        <li id="about"><a href="/about">ABOUT US</a></li>
+        <li id="contact"><a href="/leaderboard">LEADERBOARD</a></li>
+        <li id="logoutn"><a href="/logout">LOGOUT</a></li>
+    </ul>
+</div>
+<div class="leader-board">
+    <h1 class="lbheading">
+        <div class="text-box">
+
+            <span class="trophyicon"><i class="fas fa-trophy"></i> </span>
+            <span> &nbsp </span>
+            <span> L </span>
+            <span> E </span>
+            <span> A </span>
+            <span> D </span>
+            <span> E </span>
+            <span> R </span>
+            <span class="spanboard"> B </span>
+            <span class="spanboard"> O </span>
+            <span class="spanboard"> A </span>
+            <span class="spanboard"> R </span>
+            <span class="spanboard"> D </span>
+        </div>
+    </h1>
+
+
+
+    <div class="jumbotron-centered">
+        <table style="width:80%">
+            <tr>
+                <th>SR.NO</th>
+                <th>NAME</th>
+                <th>BALANCE</th>
+                <th>NUMBER OF STOCKS</th>
+            </tr>
+            <% details.forEach(function(detail){ %>
+            <tr>
+                <td><%=detail.rank%></td>
+                <td><%=detail.FullName%></td>
+                <td> <%=detail.balance%> </td>
+                <td><%=detail.numberofstocks%> </td>
+            </tr>
+            <% }) %>
+        </table>
+
+
+    </div>
+</div>
+<%- include('partials/footer') %>
